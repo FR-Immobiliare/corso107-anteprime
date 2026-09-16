@@ -1,0 +1,319 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Direzioni visive · Corso 107</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,700;1,6..96,400;1,6..96,500&family=DM+Sans:wght@400;500&family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Karla:wght@400;500;600&family=Plus+Jakarta+Sans:wght@200;300;400;500;600&display=swap">
+<style>
+:root {
+  --chrome-bg: #F7F5F0; --chrome-panel: #FDFBF7; --chrome-ink: #1A1614; --chrome-ink-soft: #4A423B;
+  --chrome-mute: #7A736A; --chrome-line: #DCD5C8; --chrome-line-soft: #EBE5D8; --chrome-accent: #6B4423;
+  --font-chrome-serif: 'Instrument Serif', 'Cormorant Garamond', 'Times New Roman', serif;
+  --font-chrome-body: 'Inter Tight', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-chrome-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --chrome-bg: #14120F; --chrome-panel: #1B1815; --chrome-ink: #EDE8DE; --chrome-ink-soft: #C6BEB2; --chrome-mute: #928B80; --chrome-line: #2A2622; --chrome-line-soft: #221F1B; --chrome-accent: #D4A76A; }
+}
+:root[data-theme="dark"] { --chrome-bg: #14120F; --chrome-panel: #1B1815; --chrome-ink: #EDE8DE; --chrome-ink-soft: #C6BEB2; --chrome-mute: #928B80; --chrome-line: #2A2622; --chrome-line-soft: #221F1B; --chrome-accent: #D4A76A; }
+
+body { background: var(--chrome-bg); color: var(--chrome-ink); font-family: var(--font-chrome-body); font-size: 15px; line-height: 1.55; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+* { box-sizing: border-box; }
+img { max-width: 100%; display: block; }
+.wrap { max-width: 1220px; margin: 0 auto; padding: 40px 32px 96px; }
+@media (max-width: 720px) { .wrap { padding: 24px 20px 64px; } }
+
+.chrome-header { display: flex; justify-content: space-between; align-items: baseline; gap: 24px; padding-bottom: 20px; border-bottom: 1px solid var(--chrome-line); margin-bottom: 56px; flex-wrap: wrap; }
+.chrome-header .brand { font-family: var(--font-chrome-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--chrome-mute); }
+.chrome-header .brand strong { color: var(--chrome-ink); font-weight: 500; }
+.chrome-header .meta { font-family: var(--font-chrome-mono); font-size: 11px; color: var(--chrome-mute); letter-spacing: 0.06em; }
+
+.intro { max-width: 780px; margin-bottom: 44px; }
+.intro .eyebrow { font-family: var(--font-chrome-mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--chrome-mute); margin-bottom: 28px; }
+.intro h1 { font-family: var(--font-chrome-serif); font-size: clamp(38px, 5.6vw, 68px); line-height: 1.02; letter-spacing: -0.01em; font-weight: 400; margin: 0 0 28px; color: var(--chrome-ink); text-wrap: balance; }
+.intro h1 em { font-style: italic; color: var(--chrome-ink-soft); }
+.intro p { font-size: 17px; line-height: 1.55; color: var(--chrome-ink-soft); max-width: 62ch; margin: 0 0 18px; }
+.intro p.note { font-size: 13px; color: var(--chrome-mute); border-left: 2px solid var(--chrome-line); padding-left: 14px; margin-top: 24px; }
+
+.toc { display: flex; flex-wrap: wrap; gap: 4px 0; margin: 44px 0 88px; border-top: 1px solid var(--chrome-line); border-bottom: 1px solid var(--chrome-line); padding: 14px 0; }
+.toc a { flex: 1 1 auto; min-width: 180px; padding: 8px 12px; text-decoration: none; color: var(--chrome-ink); font-size: 13px; font-weight: 500; border-right: 1px solid var(--chrome-line-soft); display: flex; align-items: baseline; gap: 10px; transition: background 0.15s; }
+.toc a:last-child { border-right: none; }
+.toc a:hover { background: var(--chrome-line-soft); }
+.toc a .num { font-family: var(--font-chrome-mono); font-size: 10px; color: var(--chrome-mute); letter-spacing: 0.1em; }
+
+.dir { margin: 0 0 88px; border-radius: 6px; overflow: hidden; border: 1px solid var(--chrome-line); scroll-margin-top: 24px; }
+.dir-header { padding: 44px clamp(24px, 4vw, 60px) 20px; border-bottom: 1px solid; display: grid; grid-template-columns: auto 1fr auto; gap: 32px; align-items: baseline; }
+.dir-header .n { font-family: var(--font-chrome-mono); font-size: 12px; letter-spacing: 0.12em; align-self: center; }
+.dir-header h2 { margin: 0; font-size: clamp(32px, 4.4vw, 56px); line-height: 1; letter-spacing: -0.015em; font-weight: 400; text-wrap: balance; }
+.dir-header .keys { font-family: var(--font-chrome-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; align-self: center; }
+.dir-tagline { padding: 0 clamp(24px, 4vw, 60px) 32px; max-width: 62ch; font-size: 16px; line-height: 1.55; border-bottom: 1px solid; }
+.dir-mock { padding: clamp(28px, 4vw, 60px); min-height: 340px; display: grid; gap: clamp(20px, 3vw, 40px); }
+.mock-nav { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; padding-bottom: 20px; border-bottom: 1px solid; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; }
+.mock-nav .logo { font-weight: 600; }
+.mock-nav ul { display: flex; gap: 22px; list-style: none; margin: 0; padding: 0; flex-wrap: wrap; }
+.mock-hero { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 3vw, 44px); align-items: center; }
+@media (max-width: 720px) { .mock-hero { grid-template-columns: 1fr; } }
+.mock-image { aspect-ratio: 4 / 5; border-radius: 3px; position: relative; overflow: hidden; border: 1px solid rgba(0,0,0,0.06); }
+.mock-image::after { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, rgba(0,0,0,0.02) 0 1px, transparent 1px 12px); pointer-events: none; }
+.mock-image .cap { position: absolute; bottom: 12px; left: 12px; font-family: var(--font-chrome-mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.6; }
+.mock-copy .mock-eyebrow { font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 20px; }
+.mock-copy h3 { margin: 0 0 20px; font-size: clamp(28px, 3.4vw, 44px); line-height: 1.02; font-weight: 400; letter-spacing: -0.01em; text-wrap: balance; }
+.mock-copy p { margin: 0 0 24px; max-width: 34ch; font-size: 14.5px; line-height: 1.55; }
+.mock-cta { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; border-radius: 2px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; text-decoration: none; cursor: default; }
+.mock-meta { padding-top: 20px; border-top: 1px solid; font-family: var(--font-chrome-mono); font-size: 11px; letter-spacing: 0.08em; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+.dir-spec { padding: clamp(28px, 4vw, 44px) clamp(24px, 4vw, 60px); background: var(--chrome-panel); color: var(--chrome-ink); font-family: var(--font-chrome-body); border-top: 1px solid var(--chrome-line); display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px 32px; }
+@media (max-width: 900px) { .dir-spec { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .dir-spec { grid-template-columns: 1fr; } }
+.spec-label { font-family: var(--font-chrome-mono); font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--chrome-mute); margin-bottom: 12px; }
+.spec-content { font-size: 13.5px; line-height: 1.5; color: var(--chrome-ink); }
+.spec-content strong { font-weight: 600; }
+.palette { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; margin-bottom: 10px; }
+.swatch { aspect-ratio: 1 / 1.2; border-radius: 2px; border: 1px solid rgba(0,0,0,0.05); }
+.palette-names { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; font-family: var(--font-chrome-mono); font-size: 9px; letter-spacing: 0.06em; color: var(--chrome-mute); line-height: 1.2; }
+.specimen { padding: 14px 16px; border: 1px solid var(--chrome-line); border-radius: 3px; background: var(--chrome-bg); }
+.specimen .aa { font-size: 44px; line-height: 1; margin-bottom: 6px; }
+.specimen .aa em { font-style: italic; }
+.specimen .fname { font-family: var(--font-chrome-mono); font-size: 10px; color: var(--chrome-mute); letter-spacing: 0.06em; }
+
+/* 01 TRIDENTE */
+.dir-01 { background: #F5F1E9; }
+.dir-01 .dir-header, .dir-01 .dir-tagline, .dir-01 .mock-nav, .dir-01 .mock-meta { border-color: #1B1A17; }
+.dir-01 .dir-header, .dir-01 .dir-tagline, .dir-01 .dir-mock { color: #1B1A17; }
+.dir-01 .dir-header h2, .dir-01 .mock-copy h3 { font-family: 'Instrument Serif', serif; }
+.dir-01 .dir-header h2 em, .dir-01 .mock-copy h3 em { font-style: italic; color: #B84E32; }
+.dir-01 .mock-copy .mock-eyebrow { color: #7A756B; }
+.dir-01 .mock-image { background: linear-gradient(160deg, #E8DFCC 0%, #C89C82 60%, #7A5B4A 100%); }
+.dir-01 .mock-image::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 40%, rgba(255,246,232,0.35) 0%, transparent 55%), linear-gradient(180deg, transparent 60%, rgba(27,26,23,0.25) 100%); }
+.dir-01 .mock-image .cap { color: #FBF6EA; }
+.dir-01 .mock-cta { background: #1B1A17; color: #F5F1E9; }
+
+/* 02 KOKEDAMA */
+.dir-02 { background: #E9E3D6; }
+.dir-02 .dir-header, .dir-02 .dir-tagline, .dir-02 .mock-nav, .dir-02 .mock-meta { border-color: #4A5B45; }
+.dir-02 .dir-header, .dir-02 .dir-tagline, .dir-02 .dir-mock { color: #2A2A27; }
+.dir-02 .dir-header h2, .dir-02 .mock-copy h3 { font-family: 'Cormorant Garamond', serif; font-weight: 500; letter-spacing: -0.005em; }
+.dir-02 .dir-header h2 em, .dir-02 .mock-copy h3 em { font-style: italic; color: #4A5B45; }
+.dir-02 .dir-tagline, .dir-02 .mock-nav, .dir-02 .mock-copy p, .dir-02 .mock-copy .mock-eyebrow, .dir-02 .mock-meta, .dir-02 .mock-cta { font-family: 'Manrope', sans-serif; }
+.dir-02 .mock-copy .mock-eyebrow { color: #4A5B45; letter-spacing: 0.22em; }
+.dir-02 .mock-image { background: radial-gradient(circle at 50% 45%, #D8CFBB 0%, #B8AB92 40%, #6E7A58 100%); }
+.dir-02 .mock-image::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 35% 35%, rgba(233,227,214,0.4) 0%, transparent 40%); }
+.dir-02 .mock-image .cap { color: #E9E3D6; }
+.dir-02 .mock-cta { background: transparent; color: #2A2A27; border: 1px solid #2A2A27; }
+
+/* 03 NOTTURNO */
+.dir-03 { background: #0F1420; color: #EBE1CD; }
+.dir-03 .dir-header, .dir-03 .dir-tagline, .dir-03 .mock-nav, .dir-03 .mock-meta { border-color: rgba(169,135,80,0.4); }
+.dir-03 .dir-header, .dir-03 .dir-tagline, .dir-03 .dir-mock { color: #EBE1CD; }
+.dir-03 .dir-header .n, .dir-03 .dir-header .keys { color: #A98750; }
+.dir-03 .dir-header h2, .dir-03 .mock-copy h3 { font-family: 'Bodoni Moda', serif; font-weight: 400; letter-spacing: -0.01em; }
+.dir-03 .dir-header h2 em, .dir-03 .mock-copy h3 em { font-style: italic; color: #A98750; font-weight: 500; }
+.dir-03 .dir-tagline { font-family: 'DM Sans', sans-serif; opacity: 0.85; }
+.dir-03 .mock-nav, .dir-03 .mock-copy p, .dir-03 .mock-copy .mock-eyebrow, .dir-03 .mock-meta, .dir-03 .mock-cta { font-family: 'DM Sans', sans-serif; }
+.dir-03 .mock-copy .mock-eyebrow { color: #A98750; letter-spacing: 0.24em; }
+.dir-03 .mock-copy p { color: #C9BEA6; }
+.dir-03 .mock-image { background: radial-gradient(ellipse at 60% 30%, #3A2E1E 0%, #1A1A24 45%, #0A0D14 100%); border: 1px solid rgba(169,135,80,0.15); }
+.dir-03 .mock-image::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 62% 32%, rgba(212,178,110,0.28) 0%, transparent 40%); }
+.dir-03 .mock-image .cap { color: #A98750; opacity: 0.75; }
+.dir-03 .mock-cta { background: transparent; color: #A98750; border: 1px solid #A98750; }
+.dir-03 .mock-meta { color: #928670; }
+
+/* 04 MARMI */
+.dir-04 { background: #E7DFCF; position: relative; }
+.dir-04::before { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: radial-gradient(ellipse 400px 200px at 20% 30%, rgba(140,110,80,0.06) 0%, transparent 60%), radial-gradient(ellipse 300px 260px at 80% 70%, rgba(138,62,31,0.05) 0%, transparent 60%), repeating-linear-gradient(78deg, rgba(108,91,77,0.025) 0 2px, transparent 2px 40px); }
+.dir-04 > * { position: relative; }
+.dir-04 .dir-header, .dir-04 .dir-tagline, .dir-04 .mock-nav, .dir-04 .mock-meta { border-color: #6C5B4D; }
+.dir-04 .dir-header, .dir-04 .dir-tagline, .dir-04 .dir-mock { color: #3B2E24; }
+.dir-04 .dir-header h2, .dir-04 .mock-copy h3 { font-family: 'Newsreader', serif; font-weight: 500; letter-spacing: -0.005em; }
+.dir-04 .dir-header h2 em, .dir-04 .mock-copy h3 em { font-style: italic; color: #8A3E1F; }
+.dir-04 .dir-tagline, .dir-04 .mock-nav, .dir-04 .mock-copy p, .dir-04 .mock-copy .mock-eyebrow, .dir-04 .mock-meta, .dir-04 .mock-cta { font-family: 'Karla', sans-serif; }
+.dir-04 .mock-copy .mock-eyebrow { color: #6C5B4D; letter-spacing: 0.2em; }
+.dir-04 .mock-image { background: linear-gradient(150deg, #E7DFCF 0%, #D7B5A5 45%, #A68666 100%); border-radius: 220px 220px 3px 3px; }
+.dir-04 .mock-image::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 20%, rgba(255,244,228,0.4) 0%, transparent 55%), linear-gradient(180deg, transparent 65%, rgba(59,46,36,0.25) 100%); }
+.dir-04 .mock-image .cap { color: #F3E8D6; }
+.dir-04 .mock-cta { background: #8A3E1F; color: #F3E8D6; }
+
+/* 05 SEQUENZA — scroll immersivo */
+.dir-05 { background: #1E1512; color: #EDEAE4; }
+.dir-05 .dir-header, .dir-05 .dir-tagline, .dir-05 .mock-nav, .dir-05 .mock-meta { border-color: rgba(237,234,228,0.14); }
+.dir-05 .dir-header, .dir-05 .dir-tagline, .dir-05 .dir-mock { color: #EDEAE4; font-family: 'Plus Jakarta Sans', sans-serif; }
+.dir-05 .dir-header .n, .dir-05 .dir-header .keys { color: #AE906E; }
+.dir-05 .dir-header h2 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 200; letter-spacing: -0.03em; }
+.dir-05 .dir-header h2 em { font-family: 'Instrument Serif', serif; font-style: italic; color: #AE906E; }
+.dir-05 .dir-tagline { color: rgba(237,234,228,0.75); font-weight: 300; }
+.dir-05 .mock-nav .logo { font-weight: 500; letter-spacing: 0.22em; }
+.dir-05 .mock-nav ul { color: rgba(237,234,228,0.7); }
+.dir-05 .mock-nav > div:last-child { background: #EDEAE4; color: #1E1512; padding: 8px 16px; border-radius: 999px; font-weight: 600; font-size: 11px; }
+
+.sq-board { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; perspective: 1400px; }
+@media (max-width: 820px) { .sq-board { grid-template-columns: repeat(2, 1fr); } }
+.sq-frame { aspect-ratio: 4/5; border-radius: 14px; position: relative; overflow: hidden; background: #241A16; border: 1px solid rgba(174,144,110,0.22); display: grid; place-items: center; }
+.sq-frame .k { position: absolute; top: 12px; left: 14px; font-family: var(--font-chrome-mono); font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: #AE906E; }
+.sq-frame .cap { position: absolute; bottom: 12px; left: 14px; right: 14px; font-size: 11px; line-height: 1.35; color: rgba(237,234,228,0.75); font-weight: 300; }
+.sq-frame .title { font-weight: 200; font-size: clamp(22px, 2.6vw, 34px); letter-spacing: -0.03em; line-height: 1; text-align: center; }
+.sq-frame .title strong { font-weight: 500; }
+.sq-frame .title small { display: block; margin-top: 8px; font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; font-size: 0.55em; color: #AE906E; letter-spacing: 0; }
+.sq-frame .img { width: 58%; aspect-ratio: 16/10; border-radius: 10px; background: radial-gradient(ellipse at 55% 40%, #956441 0%, #4C3022 45%, #1E1512 100%); box-shadow: 0 24px 50px rgba(0,0,0,0.5); animation: sqGrow 4.2s ease-in-out infinite alternate; }
+.sq-frame .quote { position: absolute; inset: 0; display: grid; place-items: center; padding: 18px; text-align: center; font-family: 'Instrument Serif', serif; font-style: italic; font-size: clamp(14px, 1.4vw, 19px); line-height: 1.2; color: #EDEAE4; background: radial-gradient(ellipse at 50% 50%, rgba(76,48,34,0.85) 0%, rgba(30,21,18,0.95) 70%); }
+.sq-frame .quote span { color: #AE906E; }
+.sq-frame .cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; width: 84%; transform-style: preserve-3d; }
+.sq-frame .cards i { display: block; aspect-ratio: 3/4; border-radius: 8px; background: radial-gradient(ellipse at 50% 40%, #4C3022 0%, #241A16 100%); border: 1px solid rgba(174,144,110,0.25); transform: perspective(600px) rotateX(10deg); animation: sqTilt 3.6s ease-in-out infinite alternate; }
+.sq-frame .cards i:nth-child(2) { animation-delay: 0.4s; }
+.sq-frame .cards i:nth-child(3) { animation-delay: 0.8s; }
+@keyframes sqGrow { from { transform: scale(0.72); border-radius: 12px; } to { transform: scale(1.02); border-radius: 4px; } }
+@keyframes sqTilt { from { transform: perspective(600px) rotateX(14deg) translateY(8px); opacity: 0.6; } to { transform: perspective(600px) rotateX(0deg) translateY(0); opacity: 1; } }
+.sq-bookbar { margin-top: 6px; display: inline-flex; align-items: center; gap: 0; background: rgba(30,21,18,0.9); border: 1px solid rgba(174,144,110,0.4); border-radius: 999px; padding: 6px 6px 6px 20px; justify-self: center; box-shadow: 0 20px 40px rgba(0,0,0,0.4); max-width: 100%; flex-wrap: wrap; }
+.sq-bookbar .f { display: flex; flex-direction: column; gap: 2px; padding: 4px 16px 4px 0; margin-right: 14px; border-right: 1px solid rgba(237,234,228,0.14); }
+.sq-bookbar .f .k { font-family: var(--font-chrome-mono); font-size: 8px; letter-spacing: 0.2em; text-transform: uppercase; color: #AE906E; }
+.sq-bookbar .f .v { font-size: 12px; font-weight: 500; white-space: nowrap; }
+.sq-bookbar .go { background: #EDEAE4; color: #1E1512; border-radius: 999px; padding: 10px 18px; font-weight: 600; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; }
+.dir-05 .mock-meta { color: rgba(237,234,228,0.6); }
+.dir-05 .specimen { background: #241A16; border-color: rgba(174,144,110,0.3); }
+.dir-05 .specimen .aa { color: #EDEAE4; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 200; }
+.dir-05 .specimen .aa em { font-family: 'Instrument Serif', serif; color: #AE906E; }
+.dir-05 .specimen .fname { color: #AE906E; }
+
+.closing { margin-top: 24px; padding-top: 48px; border-top: 1px solid var(--chrome-line); max-width: 780px; }
+.closing .eyebrow { font-family: var(--font-chrome-mono); font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--chrome-mute); margin-bottom: 20px; }
+.closing h2 { font-family: var(--font-chrome-serif); font-size: clamp(28px, 3.6vw, 42px); line-height: 1.08; font-weight: 400; margin: 0 0 24px; text-wrap: balance; }
+.closing h2 em { font-style: italic; color: var(--chrome-accent); }
+.closing p { font-size: 15.5px; line-height: 1.6; color: var(--chrome-ink-soft); margin: 0 0 14px; max-width: 62ch; }
+.closing ol { padding-left: 22px; color: var(--chrome-ink-soft); font-size: 15px; line-height: 1.7; margin: 20px 0 0; }
+.closing ol li::marker { font-family: var(--font-chrome-mono); font-size: 12px; color: var(--chrome-accent); }
+.foot { margin-top: 72px; padding-top: 20px; border-top: 1px solid var(--chrome-line); display: flex; justify-content: space-between; align-items: baseline; font-family: var(--font-chrome-mono); font-size: 11px; letter-spacing: 0.08em; color: var(--chrome-mute); flex-wrap: wrap; gap: 12px; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+</head><body><div class="wrap">
+  <header class="chrome-header">
+    <div class="brand"><strong>Studio brief</strong> · Restyling sito corsosuite107.com</div>
+    <div class="meta">Roma · 09/2026 · v.2</div>
+  </header>
+
+  <section class="intro">
+    <div class="eyebrow">Cinque direzioni visive · Corso Suite 107</div>
+    <h1>Cinque mondi possibili per lo stesso <em>palazzo settecentesco</em> del Tridente.</h1>
+    <p>Ogni direzione applica al brand un sistema coerente di palette, tipografia e trattamento delle immagini. Non sono varianti dello stesso tema: sono cinque letture diverse di ciò che Corso Suite 107 vuole essere. Ogni proposta è mostrata nel suo mondo, con contenuti reali dell'hotel.</p>
+    <p class="note">Le direzioni sono numerate solo per riferimento (“preferisco la 03”): non c'è ordine di preferenza. Si può scegliere una direzione come base e prendere in prestito un elemento da un'altra. La 05 è l'unica che propone anche un <em>modo di muoversi</em> del sito, non solo un look.</p>
+  </section>
+
+  <nav class="toc" aria-label="Indice delle direzioni">
+    <a href="#dir-01"><span class="num">01</span> Tridente</a>
+    <a href="#dir-02"><span class="num">02</span> Kokedama</a>
+    <a href="#dir-03"><span class="num">03</span> Notturno</a>
+    <a href="#dir-04"><span class="num">04</span> Marmi</a>
+    <a href="#dir-05"><span class="num">05</span> Sequenza</a>
+  </nav>
+
+  <section class="dir dir-01" id="dir-01">
+    <div class="dir-header"><div class="n">01</div><h2>Tridente · <em>editoriale</em> contemporaneo</h2><div class="keys">Rivista · asimmetria · nobile</div></div>
+    <div class="dir-tagline">La composizione di una rivista d'autore applicata all'ospitalità. Griglia asimmetrica, spazio bianco generoso, un accento terra di Roma. Il palazzo parla, la grafica ascolta.</div>
+    <div class="dir-mock">
+      <div class="mock-nav"><div class="logo">Corso Suite 107</div><ul><li>Home</li><li>La nostra filosofia</li><li>Il benessere</li><li>Camere &amp; Suites</li><li>Gallery</li><li>Offerte</li><li>Contatti</li></ul><div>Prenota ora</div></div>
+      <div class="mock-hero">
+        <div class="mock-image"><div class="cap">Interno del piano nobile</div></div>
+        <div class="mock-copy"><div class="mock-eyebrow">Hotel Spa · Roma centro</div><h3>Corso <em>Suite</em> 107 — il tuo Hotel Spa nel centro di Roma.</h3><p>«La Grande Bellezza fuori, la quiete assoluta dentro. Il tuo rifugio segreto nel cuore di Roma.»</p><div class="mock-cta">Prenota ora →</div></div>
+      </div>
+      <div class="mock-meta"><span>Via del Corso 107 · 00195 Roma</span><span>+39 320.9475975</span></div>
+    </div>
+    <div class="dir-spec">
+      <div><div class="spec-label">Palette</div><div class="palette"><div class="swatch" style="background:#F5F1E9"></div><div class="swatch" style="background:#1B1A17"></div><div class="swatch" style="background:#B84E32"></div><div class="swatch" style="background:#7A756B"></div><div class="swatch" style="background:#2C3B2D"></div></div><div class="palette-names"><span>Carta<br>F5F1E9</span><span>Ink<br>1B1A17</span><span>Terra<br>B84E32</span><span>Grigio<br>7A756B</span><span>Bosco<br>2C3B2D</span></div></div>
+      <div><div class="spec-label">Tipografia</div><div class="specimen"><div class="aa" style="font-family:'Instrument Serif',serif">Aa <em>Aa</em></div><div class="fname">Instrument Serif + Inter Tight</div></div></div>
+      <div><div class="spec-label">Riferimenti</div><div class="spec-content">Cabana Magazine, Apartamento, campagne editoriali Aesop. Fotografia con luce naturale, dettagli architettonici, still-life.</div></div>
+      <div><div class="spec-label">Ideale · rischi</div><div class="spec-content"><strong>Ideale:</strong> pubblico culturale-sofisticato, differenziazione forte dal luxury standard.<br><strong>Rischio:</strong> richiede fotografia editoriale, non tollera scatti generici.</div></div>
+    </div>
+  </section>
+
+  <section class="dir dir-02" id="dir-02">
+    <div class="dir-header"><div class="n">02</div><h2>Kokedama · silenzio <em>minerale</em></h2><div class="keys">Wabi-sabi · rituale · aria</div></div>
+    <div class="dir-tagline">Prende sul serio il nome della spa e lo fa diventare identità. Ceramica, muschio, oro spento; ritmo lento, tanta aria. Un mondo japandi che a Roma ancora nessuno sta occupando.</div>
+    <div class="dir-mock">
+      <div class="mock-nav"><div class="logo">Corso Suite 107</div><ul><li>Home</li><li>La nostra filosofia</li><li>Il benessere</li><li>Camere &amp; Suites</li><li>Gallery</li><li>Offerte</li><li>Contatti</li></ul><div>Prenota ora</div></div>
+      <div class="mock-hero">
+        <div class="mock-image"><div class="cap">Vasca idromassaggio · Kokedama</div></div>
+        <div class="mock-copy"><div class="mock-eyebrow">Kokedama Wellness &amp; Spa</div><h3>Un rituale privato, <em>due ore</em> per due, nel cuore del Tridente.</h3><p>Vasca idromassaggio, sauna a infrarossi, cromoterapia. Un tempo che il centro di Roma sembra non concedere più.</p><div class="mock-cta">Prenota ora</div></div>
+      </div>
+      <div class="mock-meta"><span>Via del Corso 107 · 00195 Roma</span><span>+39 320.9475975</span></div>
+    </div>
+    <div class="dir-spec">
+      <div><div class="spec-label">Palette</div><div class="palette"><div class="swatch" style="background:#E9E3D6"></div><div class="swatch" style="background:#C4B49E"></div><div class="swatch" style="background:#4A5B45"></div><div class="swatch" style="background:#2A2A27"></div><div class="swatch" style="background:#9B7A3E"></div></div><div class="palette-names"><span>Ceramica<br>E9E3D6</span><span>Argilla<br>C4B49E</span><span>Muschio<br>4A5B45</span><span>Ombra<br>2A2A27</span><span>Oro<br>9B7A3E</span></div></div>
+      <div><div class="spec-label">Tipografia</div><div class="specimen"><div class="aa" style="font-family:'Cormorant Garamond',serif;font-weight:500">Aa <em>Aa</em></div><div class="fname">Cormorant Garamond + Manrope</div></div></div>
+      <div><div class="spec-label">Riferimenti</div><div class="spec-content">Aman Resorts, Six Senses, ryokan di Kyoto; il minimalismo caldo di Toteme, Jil Sander Home. Luce diffusa, still-life botanico.</div></div>
+      <div><div class="spec-label">Ideale · rischi</div><div class="spec-content"><strong>Ideale:</strong> se la spa diventa protagonista dell'identità (wellness/retreat).<br><strong>Rischio:</strong> se poco curato scivola nel “generico spa”.</div></div>
+    </div>
+  </section>
+
+  <section class="dir dir-03" id="dir-03">
+    <div class="dir-header"><div class="n">03</div><h2>Notturno · dark <em>luxe</em> cinematografico</h2><div class="keys">Notte · ottone · scena</div></div>
+    <div class="dir-tagline">Il momento in cui arrivi all'hotel dopo cena: la luce bassa nella hall, l'ottone che riflette, il velluto. Un'identità sensuale, scenografica, che nel luxury romano manca ancora.</div>
+    <div class="dir-mock">
+      <div class="mock-nav"><div class="logo">Corso Suite 107</div><ul><li>Home</li><li>La nostra filosofia</li><li>Il benessere</li><li>Camere &amp; Suites</li><li>Gallery</li><li>Offerte</li><li>Contatti</li></ul><div>Prenota ora</div></div>
+      <div class="mock-hero">
+        <div class="mock-image"><div class="cap">Suite king · vista notturna</div></div>
+        <div class="mock-copy"><div class="mock-eyebrow">Delux King Room Access Spa</div><h3>Il palazzo si <em>svela</em> di notte, quando la città si trattiene.</h3><p>Suite affacciate su Via del Corso, ottone caldo e velluti scuri. La spa Kokedama riservata agli ospiti.</p><div class="mock-cta">Prenota ora</div></div>
+      </div>
+      <div class="mock-meta"><span>Via del Corso 107 · 00195 Roma</span><span>+39 320.9475975</span></div>
+    </div>
+    <div class="dir-spec">
+      <div><div class="spec-label">Palette</div><div class="palette"><div class="swatch" style="background:#0F1420"></div><div class="swatch" style="background:#A98750"></div><div class="swatch" style="background:#EBE1CD"></div><div class="swatch" style="background:#5C2222"></div><div class="swatch" style="background:#303646"></div></div><div class="palette-names"><span>Notte<br>0F1420</span><span>Ottone<br>A98750</span><span>Avorio<br>EBE1CD</span><span>Vino<br>5C2222</span><span>Bruma<br>303646</span></div></div>
+      <div><div class="spec-label">Tipografia</div><div class="specimen" style="background:#0F1420"><div class="aa" style="font-family:'Bodoni Moda',serif;color:#EBE1CD">Aa <em style="color:#A98750">Aa</em></div><div class="fname" style="color:#A98750">Bodoni Moda + DM Sans</div></div></div>
+      <div><div class="spec-label">Riferimenti</div><div class="spec-content">JK Place Roma, Palazzo Manfredi, campagne Bulgari Hotels. Estetica notturna alla Wong Kar-wai: contrasti profondi, luci puntuali.</div></div>
+      <div><div class="spec-label">Ideale · rischi</div><div class="spec-content"><strong>Ideale:</strong> couples, anniversari, fascia luxury; impatto immediato.<br><strong>Rischio:</strong> può risultare freddo di giorno; foto notturne di livello indispensabili.</div></div>
+    </div>
+  </section>
+
+  <section class="dir dir-04" id="dir-04">
+    <div class="dir-header"><div class="n">04</div><h2>Marmi · neomediterraneo <em>materico</em></h2><div class="keys">Travertino · arco · caldo</div></div>
+    <div class="dir-tagline">Il palazzo è a Roma, la palette lo dice. Travertino, terra bruciata, salvia; archi reinterpretati nelle forme. Radicato nella romanità, ma senza folklore.</div>
+    <div class="dir-mock">
+      <div class="mock-nav"><div class="logo">Corso Suite 107</div><ul><li>Home</li><li>La nostra filosofia</li><li>Il benessere</li><li>Camere &amp; Suites</li><li>Gallery</li><li>Offerte</li><li>Contatti</li></ul><div>Prenota ora</div></div>
+      <div class="mock-hero">
+        <div class="mock-image"><div class="cap">Facciata su Via del Corso</div></div>
+        <div class="mock-copy"><div class="mock-eyebrow">Corso Suite 107 · Roma</div><h3>Fra travertino e terracotta, <em>al numero 107</em> di Via del Corso.</h3><p>Un palazzo del Settecento nel tridente romano: suite, una spa privata, la stessa cura di sempre.</p><div class="mock-cta">Prenota ora</div></div>
+      </div>
+      <div class="mock-meta"><span>Via del Corso 107 · 00195 Roma</span><span>+39 320.9475975</span></div>
+    </div>
+    <div class="dir-spec">
+      <div><div class="spec-label">Palette</div><div class="palette"><div class="swatch" style="background:#E7DFCF"></div><div class="swatch" style="background:#D7B5A5"></div><div class="swatch" style="background:#6C5B4D"></div><div class="swatch" style="background:#8A3E1F"></div><div class="swatch" style="background:#7B8464"></div></div><div class="palette-names"><span>Travertino<br>E7DFCF</span><span>Rosato<br>D7B5A5</span><span>Pietra<br>6C5B4D</span><span>Terra<br>8A3E1F</span><span>Salvia<br>7B8464</span></div></div>
+      <div><div class="spec-label">Tipografia</div><div class="specimen"><div class="aa" style="font-family:'Newsreader',serif;font-weight:500">Aa <em>Aa</em></div><div class="fname">Newsreader + Karla</div></div></div>
+      <div><div class="spec-label">Riferimenti</div><div class="spec-content">Hotel Vilòn Roma, Le Sirenuse, Casa Fayette; materiali alla Vincenzo De Cotiis. Fotografia texturata, stucco e pietra.</div></div>
+      <div><div class="spec-label">Ideale · rischi</div><div class="spec-content"><strong>Ideale:</strong> comunicare “romanità colta” senza classicismo.<br><strong>Rischio:</strong> la texture materica va dosata o vira sul rustico.</div></div>
+    </div>
+  </section>
+
+  <section class="dir dir-05" id="dir-05">
+    <div class="dir-header"><div class="n">05</div><h2>Sequenza · scroll <em>immersivo</em></h2><div class="keys">Cinema · profondità · conversione</div></div>
+    <div class="dir-tagline">Un'esperienza cinematografica guidata dallo scroll: il palazzo si espande a tutto schermo mentre scorri, il claim emerge sopra l'immagine, le suite entrano su piani di profondità diversi, i capitoli si seguono come in un film. Un pulsante di prenotazione resta sempre a portata di mano e apre la piattaforma esterna SimpleBooking: il sito non ha un modulo di prenotazione interno. È l'unica direzione che propone anche un <strong>modo di muoversi</strong>, non solo un look.</div>
+    <div class="dir-mock">
+      <div class="mock-nav"><div class="logo">Corso Suite 107</div><ul><li>Home</li><li>La nostra filosofia</li><li>Il benessere</li><li>Camere &amp; Suites</li><li>Gallery</li><li>Offerte</li><li>Contatti</li></ul><div>Prenota ora</div></div>
+      <div class="sq-board" aria-label="Storyboard dello scroll">
+        <div class="sq-frame"><div class="k">01 · Arrivo</div><div class="title">Corso <strong>Suite</strong> 107<small>il tuo Hotel Spa nel centro di Roma</small></div><div class="cap">Titolo ultraleggero su fondo espresso, si ritrae appena inizi a scorrere.</div></div>
+        <div class="sq-frame"><div class="k">02 · Il palazzo</div><div class="img"></div><div class="cap">L'immagine resta agganciata e cresce fino a tutto schermo (pinned scale).</div></div>
+        <div class="sq-frame"><div class="k">03 · Il claim</div><div class="quote">«La Grande Bellezza fuori, <span>la quiete assoluta dentro.</span>»</div><div class="cap">Il claim reale del sito emerge sopra l'immagine, poi si dissolve.</div></div>
+        <div class="sq-frame"><div class="k">04 · Suite</div><div class="cards"><i></i><i></i><i></i></div><div class="cap">Le tre suite entrano in prospettiva 3D, su piani di profondità diversi.</div></div>
+      </div>
+      <div class="sq-bookbar" aria-label="Barra prenotazione sticky"><div class="f"><span class="k">Prenotazioni</span><span class="v">Piattaforma esterna · SimpleBooking</span></div><div class="go">Verifica disponibilità ↗</div></div>
+      <div class="mock-meta"><span>Via del Corso 107 · 00195 Roma</span><span>+39 320.9475975</span></div>
+    </div>
+    <div class="dir-spec">
+      <div><div class="spec-label">Palette</div><div class="palette"><div class="swatch" style="background:#1E1512"></div><div class="swatch" style="background:#EDEAE4"></div><div class="swatch" style="background:#956441"></div><div class="swatch" style="background:#AE906E"></div><div class="swatch" style="background:#AAA5A2"></div></div><div class="palette-names"><span>Espresso<br>1E1512</span><span>Avorio<br>EDEAE4</span><span>Cuoio<br>956441</span><span>Sabbia<br>AE906E</span><span>Pietra<br>AAA5A2</span></div></div>
+      <div><div class="spec-label">Tipografia</div><div class="specimen"><div class="aa">Aa <em>Aa</em></div><div class="fname">Plus Jakarta Sans 200–600 + Instrument Serif italic</div></div></div>
+      <div><div class="spec-label">Riferimenti · tecnica</div><div class="spec-content">Pagine prodotto Apple, Aman “Journeys”, Rosewood; landing luxury-interior con scroll storytelling. Tecnica: Lenis + GSAP ScrollTrigger / Framer Motion, prospettiva 3D CSS, video hero in loop.</div></div>
+      <div><div class="spec-label">Ideale · rischi</div><div class="spec-content"><strong>Ideale:</strong> effetto “wow” immediato, ospite internazionale abituato a esperienze premium; massimizza la conversione con booking bar sticky e prova sociale.<br><strong>Rischio:</strong> più costoso da sviluppare e mantenere; richiede foto/video eccellenti e cura delle prestazioni mobile.</div></div>
+    </div>
+  </section>
+
+  <section class="closing">
+    <div class="eyebrow">Come procedere</div>
+    <h2>Il passo successivo è <em>scegliere</em>, non decidere tutto.</h2>
+    <p>Bastano una direzione preferita e, se serve, una nota su cosa prendere in prestito da un'altra. Da lì costruisco un moodboard esteso (fotografia, esempi di layout, sistema tipografico completo) e, una volta approvato, apro il progetto in Lovable per il primo build.</p>
+    <ol>
+      <li>Il proprietario indica la direzione preferita (numero) e note libere.</li>
+      <li>Preparo moodboard esteso ed esempi hero/camera/spa specifici per quella direzione.</li>
+      <li>Approvazione moodboard → primo build su Lovable con contenuti reali, header e footer del sito attuale.</li>
+      <li>Iterazioni brevi, integrazione SimpleBooking e Google Business Profile, deploy su Cloudflare Pages, cutover DNS.</li>
+    </ol>
+  </section>
+
+  <footer class="foot"><span>Corso Suite 107 · Restyling · Studio pitch</span><span>Roma · 09/2026 · v.2</span></footer>
+</div>
+</body></html>
