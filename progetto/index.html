@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Corso Suite 107 — Il progetto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@200;300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#FBF9F5; --panel:#FFFFFF; --ink:#211E1A; --soft:#5A524A; --mute:#9A9086;
+  --line:#E7E0D4; --gold:#A8764A; --green:#4E7A52; --amber:#C08A2E; --red:#B4543C;
+  --ui:'Jost',system-ui,sans-serif; --dp:'Marcellus',Georgia,serif; --mono:'JetBrains Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--ui);font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.eyebrow{font-family:var(--mono);font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+h2{font-family:var(--dp);font-weight:400;font-size:clamp(26px,3.4vw,40px);line-height:1.15;letter-spacing:-.01em}
+h3{font-family:var(--dp);font-weight:400;font-size:19px;line-height:1.25}
+a{color:inherit}
+
+/* header */
+.top{background:#16130F;color:#F5F1EA;padding:clamp(40px,7vw,80px) 0 clamp(36px,6vw,64px);position:relative;overflow:hidden}
+.top::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 72% 40%,rgba(184,149,106,.22),transparent 68%)}
+.top .wrap{position:relative;z-index:2}
+.top .who{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,241,234,.62);margin-bottom:26px}
+.top h1{font-family:var(--dp);font-weight:400;font-size:clamp(34px,5.4vw,60px);line-height:1.05;letter-spacing:-.015em;margin-bottom:18px}
+.top h1 em{font-style:normal;color:#B8956A}
+.top p{font-size:clamp(15px,1.6vw,18px);font-weight:200;color:rgba(245,241,234,.8);max-width:58ch}
+.top .facts{display:flex;gap:clamp(20px,4vw,52px);flex-wrap:wrap;margin-top:38px;padding-top:26px;border-top:1px solid rgba(245,241,234,.2)}
+.top .facts div{font-size:13px;color:rgba(245,241,234,.75)}
+.top .facts b{display:block;font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:rgba(245,241,234,.5);font-weight:400;margin-bottom:5px}
+
+section{padding:clamp(48px,7vw,84px) 0}
+section+section{border-top:1px solid var(--line)}
+.head{margin-bottom:clamp(26px,4vw,44px)}
+.head .eyebrow{margin-bottom:12px}
+.head p{color:var(--soft);max-width:66ch;margin-top:12px;font-size:15px}
+
+/* scheda tecnica */
+.specs{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:14px}
+.spec{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:22px 20px;display:grid;gap:9px;align-content:start}
+.spec .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.spec p{font-size:13.5px;color:var(--soft);line-height:1.6}
+.spec .tag{justify-self:start;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);border-radius:100px;padding:4px 10px;color:var(--mute)}
+
+/* performance */
+.tabs{display:inline-flex;background:var(--panel);border:1px solid var(--line);border-radius:100px;padding:4px;gap:4px;margin-bottom:26px}
+.tab{border:0;background:transparent;font-family:var(--ui);font-size:12.5px;letter-spacing:.06em;color:var(--soft);padding:9px 20px;border-radius:100px;cursor:pointer;transition:.25s}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--bg)}
+.scores{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-bottom:22px}
+.score{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:20px}
+.score .lab{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-bottom:16px}
+.pair{display:flex;align-items:flex-end;gap:16px;margin-bottom:12px}
+.val{font-family:var(--dp);font-size:40px;line-height:1;font-variant-numeric:tabular-nums}
+.val small{font-size:12px;font-family:var(--ui);color:var(--mute);margin-left:3px}
+.delta{font-family:var(--mono);font-size:11px;padding:3px 9px;border-radius:100px;letter-spacing:.06em}
+.up{background:rgba(78,122,82,.12);color:var(--green)}
+.down{background:rgba(180,84,60,.12);color:var(--red)}
+.flat{background:rgba(154,144,134,.14);color:var(--mute)}
+.bars{display:grid;gap:8px}
+.bar{display:grid;grid-template-columns:62px 1fr auto;gap:10px;align-items:center;font-size:11.5px}
+.bar .n{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.bar .t{height:6px;background:#EFE9DE;border-radius:100px;overflow:hidden}
+.bar .t i{display:block;height:100%;border-radius:100px;transition:width .9s cubic-bezier(.22,.61,.36,1)}
+.bar .v{font-family:var(--mono);font-size:10.5px;color:var(--soft);min-width:34px;text-align:right}
+.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px}
+.metric{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px 20px}
+.metric .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:10px}
+.metric .row{display:flex;align-items:baseline;justify-content:space-between;gap:10px;font-size:13px}
+.metric .row+.row{margin-top:6px;padding-top:6px;border-top:1px solid var(--line)}
+.metric .row span:first-child{color:var(--mute);font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+.metric .row b{font-weight:500;font-variant-numeric:tabular-nums}
+.note{background:#FFF8EC;border:1px solid #F0E2C8;border-radius:10px;padding:18px 20px;font-size:13.5px;color:#6B5B3E;margin-top:20px;line-height:1.65}
+.note b{font-weight:500;color:#4D4131}
+
+/* prezzo */
+.price-wrap{display:grid;grid-template-columns:1fr 340px;gap:clamp(20px,3vw,40px);align-items:start}
+@media(max-width:860px){.price-wrap{grid-template-columns:1fr}}
+.incl{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.incl div{background:var(--panel);padding:15px 20px;display:grid;grid-template-columns:22px 1fr;gap:12px;align-items:start;font-size:13.5px;color:var(--soft)}
+.incl div b{color:var(--ink);font-weight:500}
+.incl .tick{color:var(--green);font-size:14px;line-height:1.5}
+.price{background:#16130F;color:#F5F1EA;border-radius:12px;padding:30px 28px;position:sticky;top:20px}
+.price .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,241,234,.55)}
+.price .fig{font-family:var(--dp);font-size:54px;line-height:1;margin:14px 0 4px}
+.price .fig small{font-size:20px;color:#B8956A}
+.price .vat{font-size:12px;color:rgba(245,241,234,.6);margin-bottom:22px}
+.price ul{list-style:none;display:grid;gap:10px;padding-top:20px;border-top:1px solid rgba(245,241,234,.18);font-size:12.5px;color:rgba(245,241,234,.78)}
+.price ul li{display:grid;grid-template-columns:auto 1fr;gap:9px}
+.price ul li i{color:#B8956A;font-style:normal}
+.price .after{margin-top:22px;padding-top:18px;border-top:1px solid rgba(245,241,234,.18);font-size:12px;color:rgba(245,241,234,.62);line-height:1.6}
+
+/* timeline */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px}
+.step{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:22px 20px;display:grid;gap:10px;align-content:start}
+.step .k{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;color:var(--gold)}
+.step p{font-size:13px;color:var(--soft);line-height:1.6}
+.step .t{font-family:var(--mono);font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);padding-top:10px;border-top:1px solid var(--line)}
+
+/* proposte */
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.links a{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;text-decoration:none;display:grid;gap:5px;transition:.25s}
+.links a:hover{border-color:var(--ink);transform:translateY(-2px)}
+.links a .n{font-family:var(--mono);font-size:9.5px;letter-spacing:.14em;color:var(--gold)}
+.links a .nm{font-family:var(--dp);font-size:17px}
+.links a .d{font-size:11.5px;color:var(--mute)}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn{border:1px solid var(--ink);border-radius:100px;padding:14px 26px;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;transition:.25s}
+.btn.solid{background:var(--ink);color:var(--bg)}
+.btn:hover{opacity:.78}
+
+footer{background:#16130F;color:rgba(245,241,234,.62);padding:34px 0;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="who">Antonio Picariello · Proposta di progetto · Settembre 2026</div>
+    <h1>Il nuovo sito di<br>Corso Suite <em>107</em></h1>
+    <p>Come è fatto, su cosa gira, quanto costa e cosa cambia rispetto al sito di oggi. I dati di velocità qui sotto sono misurati davvero, non stimati.</p>
+    <div class="facts">
+      <div><b>Struttura</b>Corso Suite 107 — Rooms Wellness &amp; Spa</div>
+      <div><b>Indirizzo</b>Via del Corso 107 · Roma</div>
+      <div><b>Su Google</b>4,7 ★ · 90 recensioni</div>
+      <div><b>Proposte pronte</b>7 versioni da guardare</div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Scheda tecnica</div>
+      <h2>Come sarà costruito</h2>
+      <p>Niente stravolgimenti: si riparte da quello che avete già — testi, indirizzo, struttura delle pagine — e si cambia la tecnologia sotto.</p>
+    </div>
+    <div class="specs">
+      <div class="spec"><div class="k">Contenuti</div><h3>Dal vostro WordPress</h3><p>I testi arrivano dalla copia del sito WordPress che ci fornite. Niente riscritture non concordate: le pagine restano quelle, con le stesse parole.</p><span class="tag">Fornito dal cliente</span></div>
+      <div class="spec"><div class="k">Dominio</div><h3>corsosuite107.com</h3><p>Resta il vostro dominio, intestato a voi. Si cambia solo dove punta: nessuna migrazione di proprietà, nessun indirizzo nuovo da comunicare.</p><span class="tag">Fornito dal cliente</span></div>
+      <div class="spec"><div class="k">Lingue</div><h3>Cinque lingue</h3><p>Italiano, inglese, francese, tedesco e spagnolo. Ogni lingua ha il suo indirizzo dedicato — meglio per Google rispetto al sistema attuale.</p><span class="tag">it · en · fr · de · es</span></div>
+      <div class="spec"><div class="k">Hosting</div><h3>Cloudflare</h3><p>Il sito viene servito dalla rete Cloudflare: copie in tutto il mondo, certificato di sicurezza incluso, protezione dagli attacchi.</p><span class="tag">Canone azzerato</span></div>
+      <div class="spec"><div class="k">Indirizzi pagine</div><h3>Sitemap conservata</h3><p>Le pagine mantengono gli indirizzi di oggi. I vecchi link continuano a funzionare e il posizionamento guadagnato su Google non si perde.</p><span class="tag">Nessun link rotto</span></div>
+      <div class="spec"><div class="k">Prenotazioni</div><h3>SimpleBooking</h3><p>Restano dove sono adesso. Il sito non gestisce disponibilità né pagamenti: ogni pulsante porta al vostro sistema, già collaudato.</p><span class="tag">Invariato</span></div>
+      <div class="spec"><div class="k">Google</div><h3>Scheda collegata</h3><p>Il sito viene allineato alla vostra scheda Google — stesso nome, indirizzo e telefono — con i dati che aiutano a comparire nelle ricerche locali.</p><span class="tag">Recensioni in home</span></div>
+      <div class="spec"><div class="k">Fotografie</div><h3>Già pronte</h3><p>Le 171 fotografie scattate nella struttura sono disponibili. Vengono preparate in più formati, così ogni dispositivo scarica solo il peso necessario.</p><span class="tag">Incluse</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Velocità e qualità · misurazioni reali</div>
+      <h2>Sito attuale e nuovo, a confronto</h2>
+      <p>Misurato con Google Lighthouse il 19 settembre 2026, sul sito online e su una pagina reale del nuovo. Su 100: più alto è meglio.</p>
+    </div>
+
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-v="mob">Telefono</button>
+      <button class="tab" role="tab" aria-selected="false" data-v="desk">Computer</button>
+    </div>
+
+    <div class="scores" id="scores"></div>
+    <div class="metrics" id="metrics"></div>
+
+    <div class="note">
+      <b>Due precisazioni, per correttezza.</b><br>
+      Da computer il vostro sito è già veloce: lì non c'era molto da migliorare, e infatti i valori restano simili. Il guadagno vero è <b>da telefono</b>, dove oggi arriva più di metà dei visitatori, e nel <b>peso della pagina</b>: da 2,3 MB a 0,19 MB, cioè circa un dodicesimo dei dati scaricati.<br><br>
+      Il punteggio <b>SEO 63</b> del nuovo è un dato onesto ma parziale: la pagina misurata è una <b>dimostrazione</b>, senza ancora le cinque lingue, la mappa del sito e le descrizioni per Google. Nel sito finito quel valore sale sopra 90 — oggi il vostro è 85, con titoli generici e descrizioni mancanti su tutte le pagine.
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Investimento</div>
+      <h2>Cosa comprende</h2>
+    </div>
+    <div class="price-wrap">
+      <div class="incl">
+        <div><span class="tick">✓</span><span><b>Progettazione grafica completa</b> — sette proposte già pronte, poi sviluppo della direzione scelta</span></div>
+        <div><span class="tick">✓</span><span><b>Tutte le pagine del sito</b> — home, filosofia, benessere, camere, gallery, offerte, contatti, privacy</span></div>
+        <div><span class="tick">✓</span><span><b>Cinque lingue</b> — con indirizzi dedicati e segnalazione corretta a Google</span></div>
+        <div><span class="tick">✓</span><span><b>Preparazione delle fotografie</b> — formati moderni e versioni per ogni dispositivo</span></div>
+        <div><span class="tick">✓</span><span><b>Ottimizzazione per Google</b> — titoli, descrizioni, dati strutturati, mappa del sito</span></div>
+        <div><span class="tick">✓</span><span><b>Collegamento alla scheda Google</b> — dati allineati, mappa e recensioni in pagina</span></div>
+        <div><span class="tick">✓</span><span><b>Pubblicazione e passaggio</b> — messa online, reindirizzamenti, vecchio sito di scorta per un mese</span></div>
+        <div><span class="tick">✓</span><span><b>Modulo contatti funzionante</b> — le richieste arrivano alla vostra email</span></div>
+        <div><span class="tick">✓</span><span><b>Statistiche di visita</b> — senza cookie, quindi senza banner fastidiosi</span></div>
+        <div><span class="tick">✓</span><span><b>Due giri di revisioni</b> — prima della pubblicazione</span></div>
+      </div>
+      <aside class="price">
+        <div class="k">Progetto completo</div>
+        <div class="fig">1.400<small> €</small></div>
+        <div class="vat">IVA esclusa · una tantum</div>
+        <ul>
+          <li><i>—</i><span>Hosting Cloudflare: nessun canone</span></li>
+          <li><i>—</i><span>Certificato di sicurezza: incluso</span></li>
+          <li><i>—</i><span>Statistiche: incluse</span></li>
+          <li><i>—</i><span>Modulo contatti: incluso</span></li>
+        </ul>
+        <div class="after">Restano a vostro carico solo il rinnovo del dominio e l'abbonamento SimpleBooking, che pagate già oggi.</div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Tempi</div>
+      <h2>Dalla scelta alla pubblicazione</h2>
+      <p>Circa cinque settimane dal via libera, se i materiali arrivano quando servono.</p>
+    </div>
+    <div class="steps">
+      <div class="step"><div class="k">Passo 1</div><h3>Scelta</h3><p>Guardate le sette proposte e indicate quella preferita, anche mescolando elementi di due.</p><div class="t">2–3 giorni</div></div>
+      <div class="step"><div class="k">Passo 2</div><h3>Materiali</h3><p>Ci passate la copia del sito WordPress e gli accessi al dominio. Io preparo le fotografie definitive.</p><div class="t">3–5 giorni</div></div>
+      <div class="step"><div class="k">Passo 3</div><h3>Costruzione</h3><p>Tutte le pagine, in cinque lingue, con i vostri testi. Con due momenti di revisione insieme.</p><div class="t">2–3 settimane</div></div>
+      <div class="step"><div class="k">Passo 4</div><h3>Online</h3><p>Pubblicazione, reindirizzamenti, collegamento a Google. Il sito attuale resta di scorta un mese.</p><div class="t">1 settimana</div></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Le proposte</div>
+      <h2>Guardatele online</h2>
+      <p>Si aprono anche dal telefono. La 05 e la 07 si muovono mentre si scorre: guardatele con calma.</p>
+    </div>
+    <div class="links">
+      <a href="../home.html#h01"><span class="n">01</span><span class="nm">Tridente</span><span class="d">Come una rivista</span></a>
+      <a href="../home.html#h02"><span class="n">02</span><span class="nm">Kokedama</span><span class="d">Calmo e naturale</span></a>
+      <a href="../home.html#h03"><span class="n">03</span><span class="nm">Notturno</span><span class="d">Scuro ed elegante</span></a>
+      <a href="../home.html#h04"><span class="n">04</span><span class="nm">Marmi</span><span class="d">I materiali di Roma</span></a>
+      <a href="../home.html#h05"><span class="n">05</span><span class="nm">Sequenza</span><span class="d">Si muove allo scroll</span></a>
+      <a href="../home.html#h06"><span class="n">06</span><span class="nm">Intonaco</span><span class="d">Caldo e completo</span></a>
+      <a href="../cinematic/"><span class="n">07</span><span class="nm">Cinematica</span><span class="d">Come un breve film</span></a>
+    </div>
+    <div class="cta-row">
+      <a class="btn solid" href="../">Tutte le proposte</a>
+      <a class="btn" href="../Corso_Suite_107_Le_Proposte.pdf">Scarica il PDF</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Corso Suite 107 · Proposta di progetto</span>
+    <span>Antonio Picariello · Settembre 2026</span>
+  </div>
+</footer>
+
+<script>
+// Misurazioni Lighthouse del 19/09/2026 — valori reali
+const DATA = {
+  mob: {
+    label: 'telefono',
+    scores: [
+      {k:'Prestazioni', a:79, b:85},
+      {k:'Accessibilità', a:87, b:93},
+      {k:'Buone pratiche', a:79, b:96},
+      {k:'SEO', a:85, b:63, demo:true}
+    ],
+    metrics: [
+      {k:'Comparsa del contenuto', a:'2,0 s', b:'2,8 s'},
+      {k:'Immagine principale', a:'4,4 s', b:'3,0 s'},
+      {k:'Stabilità visiva', a:'0,026', b:'0'},
+      {k:'Peso della pagina', a:'2,29 MB', b:'0,19 MB'}
+    ]
+  },
+  desk: {
+    label: 'computer',
+    scores: [
+      {k:'Prestazioni', a:99, b:98},
+      {k:'Accessibilità', a:87, b:93},
+      {k:'Buone pratiche', a:78, b:96},
+      {k:'SEO', a:85, b:63, demo:true}
+    ],
+    metrics: [
+      {k:'Comparsa del contenuto', a:'0,5 s', b:'0,6 s'},
+      {k:'Immagine principale', a:'0,9 s', b:'0,9 s'},
+      {k:'Stabilità visiva', a:'0,006', b:'0,005'},
+      {k:'Peso della pagina', a:'1,71 MB', b:'0,28 MB'}
+    ]
+  }
+};
+
+const col = v => v >= 90 ? 'var(--green)' : v >= 70 ? 'var(--amber)' : 'var(--red)';
+
+function render(view) {
+  const d = DATA[view];
+  document.getElementById('scores').innerHTML = d.scores.map(s => {
+    const diff = s.b - s.a;
+    const cls = s.demo ? 'flat' : diff > 0 ? 'up' : diff < 0 ? 'down' : 'flat';
+    const txt = s.demo ? 'da completare' : (diff > 0 ? '+' : '') + diff;
+    return `<div class="score">
+      <div class="lab">${s.k}</div>
+      <div class="pair"><span class="val" style="color:${col(s.b)}">${s.b}<small>/100</small></span><span class="delta ${cls}">${txt}</span></div>
+      <div class="bars">
+        <div class="bar"><span class="n">Oggi</span><span class="t"><i style="width:${s.a}%;background:${col(s.a)};opacity:.45"></i></span><span class="v">${s.a}</span></div>
+        <div class="bar"><span class="n">Nuovo</span><span class="t"><i style="width:${s.b}%;background:${col(s.b)}"></i></span><span class="v">${s.b}</span></div>
+      </div>
+    </div>`;
+  }).join('');
+
+  document.getElementById('metrics').innerHTML = d.metrics.map(m => `
+    <div class="metric">
+      <div class="k">${m.k}</div>
+      <div class="row"><span>Oggi</span><b>${m.a}</b></div>
+      <div class="row"><span>Nuovo</span><b>${m.b}</b></div>
+    </div>`).join('');
+}
+
+document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
+  document.querySelectorAll('.tab').forEach(o => o.setAttribute('aria-selected', String(o === t)));
+  render(t.dataset.v);
+}));
+render('mob');
+</script>
+</body>
+</html>
