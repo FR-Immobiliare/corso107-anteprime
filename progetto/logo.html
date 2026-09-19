@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Corso Suite 107 — Il marchio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@200;300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{--bg:#FBF9F5;--panel:#fff;--ink:#211E1A;--soft:#5A524A;--mute:#9A9086;--line:#E7E0D4;--gold:#A8764A;--dark:#16130F;--stone:#F3EFE7}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:'Jost',system-ui,sans-serif;font-weight:300;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin:0 auto;padding:0 clamp(20px,4vw,48px)}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--mute)}
+h2{font-family:'Marcellus',serif;font-weight:400;font-size:clamp(26px,3.4vw,40px);line-height:1.15}
+h3{font-family:'Marcellus',serif;font-weight:400;font-size:19px}
+section{padding:clamp(44px,6vw,74px) 0}
+section+section{border-top:1px solid var(--line)}
+.head{margin-bottom:clamp(24px,4vw,40px)}
+.head .eyebrow{margin-bottom:12px}
+.head p{color:var(--soft);max-width:68ch;margin-top:12px;font-size:15px}
+
+.top{background:var(--dark);color:#F5F1EA;padding:clamp(38px,6vw,66px) 0;position:relative;overflow:hidden}
+.top::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 70% 40%,rgba(184,149,106,.2),transparent 68%)}
+.top .wrap{position:relative;z-index:2}
+.top .k{font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,241,234,.6);margin-bottom:20px}
+.top h1{font-family:'Marcellus',serif;font-weight:400;font-size:clamp(32px,5vw,52px);line-height:1.06;margin-bottom:14px}
+.top h1 em{font-style:normal;color:#B8956A}
+.top p{color:rgba(245,241,234,.8);font-weight:200;max-width:58ch;font-size:16px}
+.back{display:inline-block;margin-top:22px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#B8956A;text-decoration:none;border-bottom:1px solid rgba(184,149,106,.4);padding-bottom:3px}
+
+/* diagnosi */
+.diag{display:grid;grid-template-columns:270px 1fr;gap:clamp(24px,4vw,48px);align-items:start}
+@media(max-width:800px){.diag{grid-template-columns:1fr}}
+.now{background:#6A6A6A;border-radius:12px;padding:26px;display:grid;place-items:center;gap:16px;text-align:center}
+.now .sq{width:104px;height:104px;border:2px solid #fff;padding:6px}
+.now .sq div{width:100%;height:100%;border:1px solid #fff;display:grid;place-items:center}
+.now .sq svg{width:74%;height:74%}
+.now .nm{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:27px;color:#fff}
+.now .sub{font-family:'Cormorant Garamond',serif;font-size:10px;letter-spacing:.24em;color:rgba(255,255,255,.9)}
+.now .cap{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.6)}
+.issues{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.issues div{background:var(--panel);padding:15px 20px;display:grid;grid-template-columns:24px 1fr;gap:12px;font-size:13.5px;color:var(--soft)}
+.issues b{color:var(--ink);font-weight:500}
+.issues .n{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--gold);padding-top:3px}
+
+/* griglia proposte */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:grid;grid-template-rows:auto auto 1fr}
+.stage{background:var(--stone);display:grid;place-items:center;padding:42px 26px;min-height:196px}
+.row{display:grid;grid-template-columns:1fr auto auto;gap:14px;align-items:center;padding:14px 18px;background:var(--dark);border-top:1px solid var(--line)}
+.row .mini{display:flex;align-items:center;gap:9px;min-width:0}
+.row .mini svg{height:22px;width:auto;color:#B8956A;flex:none}
+.row .mini .t{font-family:'Marcellus',serif;font-size:12.5px;color:#F5F1EA;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.row .fav{width:30px;height:30px;border-radius:7px;background:rgba(245,241,234,.1);display:grid;place-items:center;flex:none}
+.row .fav svg{width:62%;height:62%;color:#B8956A}
+.row .fav .num{font-family:'Marcellus',serif;font-size:12px;color:#B8956A}
+.row .lab{font-family:'JetBrains Mono',monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:rgba(245,241,234,.45)}
+.note{padding:18px 20px 20px;display:grid;gap:8px;align-content:start}
+.note .h{display:flex;align-items:baseline;gap:9px}
+.note .n{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--gold)}
+.note p{font-size:13px;color:var(--soft);line-height:1.6}
+.note .when{font-size:12.5px;color:var(--mute);padding-top:9px;border-top:1px solid var(--line);margin-top:2px}
+
+/* marchio */
+.mk{display:grid;justify-items:center;gap:12px;text-align:center;color:var(--ink)}
+.mk .name{font-family:'Marcellus',serif;line-height:1;letter-spacing:.05em;font-size:21px}
+.mk .name b{font-weight:400;color:var(--gold)}
+.mk .tag{font-family:'Jost',sans-serif;font-weight:300;font-size:8.5px;letter-spacing:.32em;color:var(--soft);margin-top:7px}
+.mk svg{color:var(--ink)}
+
+/* prezzo */
+.offer{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:800px){.offer{grid-template-columns:1fr}}
+.price{border:1px solid var(--line);border-radius:12px;background:var(--panel);padding:28px 26px;display:grid;gap:13px;align-content:start}
+.price.hi{background:var(--dark);color:#F5F1EA;border-color:var(--dark)}
+.price .k{font-family:'JetBrains Mono',monospace;font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--mute)}
+.price.hi .k{color:rgba(245,241,234,.55)}
+.price .fig{font-family:'Marcellus',serif;font-size:40px;line-height:1}
+.price .fig small{font-size:16px;color:var(--gold)}
+.price ul{list-style:none;display:grid;gap:9px;font-size:13.5px;color:var(--soft);padding-top:13px;border-top:1px solid var(--line)}
+.price.hi ul{color:rgba(245,241,234,.78);border-color:rgba(245,241,234,.18)}
+.price ul li{display:grid;grid-template-columns:15px 1fr;gap:9px}
+.price ul li i{font-style:normal;color:var(--gold)}
+.tot{margin-top:18px;padding:17px 22px;border:1px dashed var(--line);border-radius:10px;font-size:14px;color:var(--soft);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.tot b{color:var(--ink);font-weight:500;font-family:'Marcellus',serif;font-size:18px}
+footer{background:var(--dark);color:rgba(245,241,234,.6);padding:28px 0;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<!-- simboli -->
+<svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+  <!-- 01 sigillo -->
+  <symbol id="s1" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+    <rect x="5" y="5" width="90" height="90" stroke-width="2"/>
+    <path d="M67 31a23 23 0 1 0 0 38" stroke-width="7.5" stroke-linecap="square"/>
+  </symbol>
+  <!-- 02 monogramma CS in legatura -->
+  <symbol id="s2" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+    <path d="M70 28a26 26 0 1 0 0 44" stroke-width="8" stroke-linecap="round"/>
+    <path d="M62 38c-6-5-16-4-16 3s16 5 16 13-10 9-16 4" stroke-width="4.5" stroke-linecap="round"/>
+  </symbol>
+  <!-- 03 arco -->
+  <symbol id="s3" viewBox="0 0 80 96" fill="none" stroke="currentColor">
+    <path d="M9 92V38a31 31 0 0 1 62 0v54" stroke-width="6.5"/>
+    <path d="M26 92V41a14 14 0 0 1 28 0v51" stroke-width="2"/>
+  </symbol>
+  <!-- 04 tridente -->
+  <symbol id="s4" viewBox="0 0 88 96" fill="none" stroke="currentColor" stroke-linecap="round">
+    <circle cx="44" cy="13" r="6.5" fill="currentColor" stroke="none"/>
+    <path d="M44 22v68" stroke-width="5"/>
+    <path d="M42 24 14 90" stroke-width="3.4"/>
+    <path d="M46 24 74 90" stroke-width="3.4"/>
+  </symbol>
+  <!-- 05 kokedama -->
+  <symbol id="s5" viewBox="0 0 96 96" fill="none" stroke="currentColor">
+    <circle cx="48" cy="58" r="30" stroke-width="5"/>
+    <path d="M48 28V8" stroke-width="3" stroke-linecap="round"/>
+    <path d="M48 17c6-7 15-7 19-3-3 6-12 8-19 3z" stroke-width="2.4" stroke-linejoin="round"/>
+    <path d="M30 58a18 18 0 0 1 12-16" stroke-width="2.4" stroke-linecap="round"/>
+  </symbol>
+  <!-- 06 onda spa -->
+  <symbol id="s6" viewBox="0 0 96 96" fill="none" stroke="currentColor" stroke-linecap="round">
+    <circle cx="48" cy="48" r="40" stroke-width="3"/>
+    <path d="M22 42c7-7 13-7 20 0s13 7 20 0" stroke-width="4.5"/>
+    <path d="M22 56c7-7 13-7 20 0s13 7 20 0" stroke-width="4.5" opacity=".55"/>
+  </symbol>
+  <!-- 07 finestra -->
+  <symbol id="s7" viewBox="0 0 84 96" fill="none" stroke="currentColor">
+    <path d="M6 92V36a36 36 0 0 1 72 0v56" stroke-width="4"/>
+    <path d="M42 8v84M8 50h68" stroke-width="2.6"/>
+    <path d="M42 50h36v42H42z" fill="currentColor" stroke="none" opacity=".92"/>
+  </symbol>
+  <!-- 08 targa chiave -->
+  <symbol id="s8" viewBox="0 0 72 100" fill="none" stroke="currentColor">
+    <rect x="6" y="20" width="60" height="74" rx="30" stroke-width="4"/>
+    <circle cx="36" cy="12" r="8" stroke-width="4"/>
+  </symbol>
+  <!-- 09 lapide / filetto -->
+  <symbol id="s9" viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-linecap="round">
+    <path d="M4 20h44M72 20h44" stroke-width="1.8"/>
+    <path d="M60 13l6 7-6 7-6-7z" stroke-width="1.8" stroke-linejoin="round"/>
+  </symbol>
+  <!-- 10 goccia + C -->
+  <symbol id="s10" viewBox="0 0 84 100" fill="none" stroke="currentColor">
+    <path d="M42 8c16 22 26 35 26 48a26 26 0 1 1-52 0c0-13 10-26 26-48z" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M52 44a16 16 0 1 0 0 26" stroke-width="4.5" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <div class="k">Corso Suite 107 · proposta aggiuntiva</div>
+    <h1>Il marchio, <em>rimesso a fuoco</em></h1>
+    <p>Il logo attuale funziona su una targa, ma soffre dove il sito lo userà di più: piccolo, su fondo chiaro, nella scheda Google o come icona del browser. Qui sotto undici strade possibili.</p>
+    <a class="back" href="./">← Torna alla scheda del progetto</a>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Punto di partenza</div>
+      <h2>Cosa non funziona oggi</h2>
+      <p>Non è questione di gusto: sono limiti tecnici che emergono quando il marchio esce dalla carta ed entra in uno schermo.</p>
+    </div>
+    <div class="diag">
+      <div class="now">
+        <div class="sq"><div>
+          <svg viewBox="0 0 100 100" fill="none"><path d="M76 20a34 34 0 1 0 0 60c-12-8-18-18-18-30s6-22 18-30z" fill="#6A6A6A"/></svg>
+        </div></div>
+        <div>
+          <div class="nm">CorsoSuite107</div>
+          <div class="sub">ROOMS WELLNESS &amp; SPA</div>
+        </div>
+        <div class="cap">Marchio attuale</div>
+      </div>
+      <div class="issues">
+        <div><span class="n">01</span><span><b>Le parole sono attaccate.</b> «CorsoSuite107» si legge come una parola sola: piccolo, nome e numero civico si confondono.</span></div>
+        <div><span class="n">02</span><span><b>I tratti sottili spariscono.</b> Il carattere ha forti contrasti fra pieni e vuoti: sotto i 20 pixel le parti fini si spezzano.</span></div>
+        <div><span class="n">03</span><span><b>La doppia cornice non regge la riduzione.</b> Due filetti ravvicinati si impastano appena il marchio rimpicciolisce.</span></div>
+        <div><span class="n">04</span><span><b>Manca la versione orizzontale.</b> L'intestazione del sito chiede un marchio largo e basso; quello attuale è alto e va compresso.</span></div>
+        <div><span class="n">05</span><span><b>Il fondo grigio è dentro il file.</b> Senza versione trasparente non si appoggia su una fotografia, come invece serve al nuovo sito.</span></div>
+        <div><span class="n">06</span><span><b>La «C» è ambigua.</b> Letta di sfuggita sembra una luna. Può diventare un punto di forza, ma va risolta con intenzione.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Esplorazione · undici direzioni</div>
+      <h2>Dove potrebbe andare</h2>
+      <p>Undici idee distinte, non undici varianti della stessa. Ognuna è mostrata nella versione completa su fondo chiaro, nella striscia per l'intestazione su fondo scuro e nell'icona quadrata: le tre misure in cui il marchio vivrà davvero.</p>
+    </div>
+
+    <div class="grid">
+
+      <article class="card">
+        <div class="stage"><div class="mk">
+          <svg width="76" height="76"><use href="#s1"/></svg>
+          <div><div class="name">CORSO SUITE <b>107</b></div><div class="tag">ROOMS WELLNESS &amp; SPA</div></div>
+        </div></div>
+        <div class="row">
+          <div class="mini"><svg viewBox="0 0 100 100" style="height:22px"><use href="#s1"/></svg><span class="t">CORSO SUITE 107</span></div>
+          <div class="fav"><svg viewBox="0 0 100 100"><use href="#s1"/></svg></div>
+          <span class="lab">chiaro<br>scuro</span>
+        </div>
+        <div class="note">
+          <div class="h"><span class="n">01</span><h3>Il sigillo</h3></div>
+          <p>Resta il quadrato, resta la «C», ma con una sola cornice e spessori uniformi che reggono la riduzione. Il nome si apre in tre parole.</p>
+          <p class="when">Se non volete che i clienti abituali si accorgano del cambio.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="stage"><div class="mk">
+          <div class="tag" style="font-size:9.5px;letter-spacing:.42em;margin:0">CORSO SUITE</div>
+          <div class="name" style="font-size:62px;letter-spacing:-.01em">1<b>0</b>7</div>
+          <div class="tag" style="margin-top:0">ROMA · WELLNESS &amp; SPA</div>
+        </div></div>
+        <div class="row">
+          <div class="mini"><span class="t" style="color:#B8956A;font-size:16px">107</span><span class="t" style="opacity:.75">CORSO SUITE</span></div>
+          <div class="fav"><span class="num">107</span></div>
+          <span class="lab">chiaro<br>scuro</span>
+        </div>
+        <div class="note">
+          <div class="h"><span class="n">02</span><h3>Il centosette</h3></div>
+          <p>Il numero civico diventa il marchio. È già la cosa che la gente ricorda — «quello al centosette» — e funziona benissimo piccolo.</p>
+          <p class="when">Se volete un segno che si riconosca da lontano e viva sui social.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="stage"><div class="mk">
+          <svg width="66" height="80"><use href="#s3"/></svg>
+          <div><div class="name">CORSO SUITE <b>107</b></div><div class="tag">ROOMS WELLNESS &amp; SPA</div></div>
+        </div></div>
+        <div class="row">
+          <div class="mini"><svg viewBox="0 0 80 96" style="height:22px"><use href="#s3"/></svg><span class="t">CORSO SUITE 107</span></div>
+          <div class="fav"><svg viewBox="0 0 80 96"><use href="#s3"/></svg></div>
+          <span class="lab">chiaro<br>scuro</span>
+        </div>
+        <div class="note">
+          <div class="h"><span class="n">03</span><h3>L'arco</h3></div>
+          <p>L'arco del portone, l'arco romano e insieme una «C» aperta. Un segno semplice che si incide bene ovunque.</p>
+          <p class="when">Se volete legare il marchio al palazzo, non solo al nome.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="stage"><div class="mk">
+          <svg width="74" height="74"><use href="#s2"/></svg>
+          <div><div class="name">CORSO SUITE <b>107</b></div><div class="tag">ROOMS WELLNESS &amp; SPA</div></div>
+        </div></div>
+        <div class="row">
+          <div class="mini"><svg viewBox="0 0 100 100" style="height:22px"><use href="#s2"/></svg><span class="t">CORSO SUITE 107</span></div>
+          <div class="fav"><svg viewBox="0 0 100 100"><use href="#s2"/></svg></div>
+          <span class="lab">chiaro<br>scuro</span>
+        </div>
+        <div class="note">
+          <div class="h"><span class="n">04</span><h3>La legatura</h3></div>
+          <p>La «C» di Corso e la «S» di Suite intrecciate in un monogramma unico: la soluzione classica degli hotel storici, disegnata con tratto moderno.</p>
+          <p class="when">Su carta intestata, cartelline e tovagliato dà molto.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="stage"><div class="mk">
+          <svg width="66" height="78"><use href="#s4"/></svg>
+          <div><div class="name">CORSO SUITE <b>107</b></div><div class="tag">NEL TRIDENTE · ROMA</div></div>
+        </div></div>
+        <div class="row">
+          <div class="mini"><svg viewBox="0 0 88 96" style="height:22px"><use href="#s4"/></svg><span class="t">CORSO SUITE 107</span></div>
+          <div class="fav"><svg viewBox="0 0 88 96"><use href="#s4"/></svg></div>
+          <span class="lab">chiaro<br>scuro</span>
+        </div>
+        <div class="note">
+          <div class="h"><span class="n">05</span><h3>Il Tridente</h3></div>
+          <p>Le tre strade che partono da Piazza del Popolo — Corso, Babuino, Ripetta — diventano il segno. Racconta esattamente dove siete.</p>
+          <p class="when">Se la posizione è il vostro argomento più forte. E lo è.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="stage"><div class="mk">
+          <svg width="70" height="70"><use href="#s5"/></svg>
+          <div><div class="name">CORSO SUITE <b>107</b></div><div class="tag">KOKEDAMA WELLNESS &amp; SPA</div></div>
+        </div></div>
+        <div class="row">
+          <div class="mini"><svg viewBox="0 0 96 96" style="height:22px"><use href="#s5"/></svg><span class="t">CORSO SUITE 107</span></div>
+          <div class="fav"><svg viewBox="0 0 96 96"><use href="#s5"/></svg></div>
+          <span class="lab">chiaro<br>scuro</span>
+        </div>
+        <div class="note">
+          <div class="h"><span class="n">06</span><h3>Il kokedama</h3></div>
+          <p>La sfera di muschio che dà il nome alla spa, ridotta all'essenziale. Un marchio che parla di benessere prima che di camere.</p>
+          <p class="when">Se la spa diventa il centro della vostra offerta.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="stage"><div class="mk">
+          <svg width="70" height="70"><use href="#s6"/></svg>
+          <div><div class="name">CORSO SUITE <b>107</b></div><div class="tag">ROOMS WELLNESS &amp; SPA</div></div>
+        </div></div>
+        <div class="row">
+          <div class="mini"><svg viewBox="0 0 96 96" style="height:22px"><use href="#s6"/></svg><span class="t">CORSO SUITE 107</span></div>
+          <div class="fav"><svg viewBox="0 0 96 96"><use href="#s6"/></svg></div>
+          <span class="lab">chiaro<br>scuro</span>
+        </div>
+        <div class="note">
+          <div class="h"><span class="n">07</span><h3>L'acqua</h3></div>
+          <p>Due onde dentro un cerchio: la vasca idromassaggio, il rituale, la quiete. Il più immediato da capire per chi cerca una spa.</p>
+          <p class="when">Funziona benissimo piccolo, meno come marchio d'hotel puro.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="stage"><div class="mk">
+          <svg width="64" height="78"><use href="#s7"/></svg>
+          <div><div class="name">CORSO SUITE <b>107</b></div><div class="tag">PALAZZO DI FINE ’700</div></div>
+        </div></div>
+        <div class="row">
+          <div class="mini"><svg viewBox="0 0 84 96" style="height:22px"><use href="#s7"/></svg><span class="t">CORSO SUITE 107</span></div>
+          <div class="fav"><svg viewBox="0 0 84 96"><use href="#s7"/></svg></div>
+          <span class="lab">chiaro<br>scuro</span>
+        </div>
+        <div class="note">
+          <div class="h"><span class="n">08</span><h3>La finestra</h3></div>
+          <p>Una finestra del palazzo con un'anta in ombra: dentro c'è la luce accesa. Racconta l'idea di rifugio meglio di qualsiasi parola.</p>
+          <p class="when">Elegante e caldo, ottimo sulle insegne e sulle chiavi.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="stage"><div class="mk">
+          <div style="position:relative;display:grid;place-items:center">
+            <svg width="54" height="76"><use href="#s8"/></svg>
+            <span style="position:absolute;top:56%;transform:translateY(-50%);font-family:'Marcellus',serif;font-size:19px;color:var(--gold)">107</span>
+          </div>
+          <div><div class="name">CORSO SUITE</div><div class="tag">ROOMS WELLNESS &amp; SPA</div></div>
+        </div></div>
+        <div class="row">
+          <div class="mini"><svg viewBox="0 0 72 100" style="height:22px"><use href="#s8"/></svg><span class="t">CORSO SUITE 107</span></div>
+          <div class="fav"><span class="num" style="font-size:10px">107</span></div>
+          <span class="lab">chiaro<br>scuro</span>
+        </div>
+        <div class="note">
+          <div class="h"><span class="n">09</span><h3>La targa</h3></div>
+          <p>Il pendaglio della chiave di camera, con il numero civico inciso. Un oggetto prima che un logo: si può davvero produrre in ottone.</p>
+          <p class="when">Se volete un marchio che diventi anche un oggetto ricordo.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="stage"><div class="mk">
+          <div class="name" style="font-size:25px;letter-spacing:.14em">CORSO SUITE</div>
+          <svg width="96" height="30" style="margin:-2px 0"><use href="#s9"/></svg>
+          <div class="name" style="font-size:31px;letter-spacing:.1em;color:var(--gold)">107</div>
+          <div class="tag">ROMA · WELLNESS &amp; SPA</div>
+        </div></div>
+        <div class="row">
+          <div class="mini"><span class="t" style="letter-spacing:.14em">CORSO SUITE</span><span class="t" style="color:#B8956A">107</span></div>
+          <div class="fav"><span class="num" style="font-size:14px">C</span></div>
+          <span class="lab">chiaro<br>scuro</span>
+        </div>
+        <div class="note">
+          <div class="h"><span class="n">10</span><h3>L'iscrizione</h3></div>
+          <p>Nessun simbolo: solo capitali romane e un filetto, come le iscrizioni sui palazzi. La strada più sobria e la più difficile da sbagliare.</p>
+          <p class="when">Massima eleganza, ma serve una fotografia forte accanto.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="stage"><div class="mk">
+          <svg width="62" height="76"><use href="#s10"/></svg>
+          <div><div class="name">CORSO SUITE <b>107</b></div><div class="tag">ROOMS WELLNESS &amp; SPA</div></div>
+        </div></div>
+        <div class="row">
+          <div class="mini"><svg viewBox="0 0 84 100" style="height:22px"><use href="#s10"/></svg><span class="t">CORSO SUITE 107</span></div>
+          <div class="fav"><svg viewBox="0 0 84 100"><use href="#s10"/></svg></div>
+          <span class="lab">chiaro<br>scuro</span>
+        </div>
+        <div class="note">
+          <div class="h"><span class="n">11</span><h3>La goccia</h3></div>
+          <p>Una goccia che contiene la «C»: unisce in un solo segno le camere e la spa, i due motivi per cui si prenota da voi.</p>
+          <p class="when">Il più «wellness» dei segni che restano leggibili come hotel.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Investimento</div>
+      <h2>Due possibilità</h2>
+      <p>Si può scegliere il ritocco, che mantiene tutto e risolve solo i problemi tecnici, oppure il marchio nuovo, partendo da una di queste strade.</p>
+    </div>
+    <div class="offer">
+      <div class="price">
+        <div class="k">Opzione leggera</div>
+        <h3>Ritocco del marchio attuale</h3>
+        <div class="fig">250<small> €</small></div>
+        <ul>
+          <li><i>—</i><span>Spaziature e proporzioni corrette</span></li>
+          <li><i>—</i><span>Tratti ridisegnati per reggere le piccole dimensioni</span></li>
+          <li><i>—</i><span>Versione orizzontale per l'intestazione</span></li>
+          <li><i>—</i><span>Versioni su trasparente, chiara e scura</span></li>
+          <li><i>—</i><span>Icona per browser e social</span></li>
+          <li><i>—</i><span>File vettoriali definitivi</span></li>
+        </ul>
+      </div>
+      <div class="price hi">
+        <div class="k">Opzione completa</div>
+        <h3 style="color:#F5F1EA">Marchio nuovo</h3>
+        <div class="fig" style="color:#F5F1EA">450<small> €</small></div>
+        <ul>
+          <li><i>—</i><span>Undici direzioni esplorate, tre portate a finitura</span></li>
+          <li><i>—</i><span>Due giri di modifiche sulla direzione scelta</span></li>
+          <li><i>—</i><span>Tutte le declinazioni: verticale, orizzontale, solo simbolo</span></li>
+          <li><i>—</i><span>Versioni per fondo chiaro, scuro e fotografia</span></li>
+          <li><i>—</i><span>Icona, immagine per i social, file per la stampa</span></li>
+          <li><i>—</i><span>Guida d'uso: colori, spazi minimi, cosa evitare</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="tot">
+      <span>Sito completo <b>1.400 €</b> · con il marchio nuovo <b>1.850 €</b> · con il solo ritocco <b>1.650 €</b></span>
+      <span style="color:var(--mute);font-size:12.5px">Al netto delle tasse · una tantum</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>Corso Suite 107 · Il marchio</span>
+    <span>Antonio Picariello · Settembre 2026</span>
+  </div>
+</footer>
+</body>
+</html>
