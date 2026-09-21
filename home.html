@@ -41,6 +41,15 @@ body { background: var(--c-bg); color: var(--c-ink); font-family: 'Inter Tight',
 .motion-toggle[aria-pressed="false"] { opacity: 0.6; text-decoration: line-through; }
 .viewer-note { font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: var(--c-mute); text-transform: uppercase; }
 
+
+.ip-note{max-width:78ch;margin:0 auto;padding:18px 22px;border:1px solid rgba(154,144,134,.35);border-radius:9px;
+  font-size:11px;line-height:1.65;color:#8B8278;letter-spacing:.01em;text-align:left}
+.ip-note b{color:#6B6258;font-weight:500}
+.ip-wrap{padding:26px clamp(20px,4vw,48px) 34px}
+
+.ip-bar{background:#14120F;color:#8B8278;padding:22px clamp(20px,4vw,48px)}
+.ip-bar .ip-note{border-color:rgba(255,255,255,.14);color:rgba(255,255,255,.5)}
+.ip-bar .ip-note b{color:rgba(255,255,255,.72)}
 /* ============ HOMEPAGE COMMON ============ */
 .home { min-height: 100vh; }
 .home[hidden] { display: none; }
@@ -1481,6 +1490,8 @@ html.no-motion .sq-hero-inner { transform: none !important; opacity: 1 !importan
     <div class="in-copy">Copyright 2026 | CORSOSUITE107.COM | Via del Corso 107 | 00195 Roma | Credits: Antonio Picariello</div>
   </footer>
 </main>
+
+<div class="ip-bar"><p class="ip-note"><b>Proprietà intellettuale.</b> Progetto grafico e fotografie di Antonio Picariello, tutelati dalla legge sul diritto d'autore (L. 633/1941). Materiale destinato alla sola valutazione da parte di Corso Suite 107: la licenza d'uso viene ceduta con l'accettazione del preventivo e il saldo. Ne sono vietate la riproduzione, la diffusione a terzi e l'utilizzo, anche parziale, da parte di altri fornitori.</p></div>
 
 <script>
 (function(){
